@@ -8,7 +8,7 @@ function saveoff_color(fname,v,f,vc)
 % (fangq<at> nmr.mgh.harvard.edu) written by Or Litany (orlitany <at> gmail <dot> com )
 % 
 % input:
-% fname: output file name%      
+% fname: output file name (including the 'off' suffix)%      
 % v: input, surface node list, dimension (nn,3)
 % vc: input, vertices color
 % f: input, surface face element list, dimension (be,3)%
