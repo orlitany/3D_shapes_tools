@@ -1,4 +1,4 @@
-function shape = loadoff_color(filename)
+function shape = loadoff_old(filename)
 
 shape = [];
 
@@ -14,15 +14,11 @@ data = fscanf(f, '%f');
 shape.TRIV = reshape(data(3*nv+1:3*nv+4*nt), [4 nt])';
 shape.TRIV = shape.TRIV(:,2:end) + 1;
 
-data = data(1:7*nv);
-data = reshape(data, [7 nv]);
-
-color_per_vertex = data(4:6,:)';
+data = data(1:3*nv);
+data = reshape(data, [3 nv]);
 
 shape.X = data(1,:)';
 shape.Y = data(2,:)';
 shape.Z = data(3,:)';
-
-shape.color = color_per_vertex;
 
 fclose(f);
