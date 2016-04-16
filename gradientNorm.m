@@ -42,12 +42,14 @@ TNEIGH = sparse([id1(:,1);id2(:,1);id3(:,1)],[id1(:,2);id2(:,2);id3(:,2)],ones(3
 
 if ~isempty(rho)
 	TriRho = (TNEIGH')*rho/3;
-	betta = At.*TriRho.^2;
+% 	betta = At.*TriRho.^2;
+ 	betta = TriRho.^2;
 	betta = spdiags(betta,0,size(betta,1),size(betta,1));
 	A = Dx'*betta*Dx + Dy'*betta*Dy;
 else
 	TriRho = (TNEIGH')*ones(size(shape.X,1),1)/3;
-	betta = sqrt(At).*TriRho;
+% 	betta = sqrt(At).*TriRho;
+    betta = TriRho;
 	betta = spdiags(betta,0,size(betta,1),size(betta,1));
 	A = [betta*Dx;betta*Dy];
 
