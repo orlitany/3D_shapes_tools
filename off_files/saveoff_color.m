@@ -1,6 +1,6 @@
 function saveoff_color(fname,v,f,vc)
 %
-% saveoff(fname,v,vc,f)
+% saveoff(fname,v,f,vc)
 %
 % save a surface mesh or pointcloud to Geomview Object File Format (OFF)
 %

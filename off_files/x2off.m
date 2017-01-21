@@ -12,7 +12,7 @@
 function x2off(filename_in)
 
     cmnd = ['C:' ' && ' 'cd C:\Program Files\VCG\MeshLab' ' && ' 'meshlabserver -i '...
-    filename_in ' -o ' [filename_in(1:end-3) 'off'] ' -m fc vc'];
+    filename_in ' -o ' [filename_in(1:end-3) 'off'] ' -om fc vc'];
     system(cmnd);
 
 end
